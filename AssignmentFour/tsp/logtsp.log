@@ -1,0 +1,49 @@
+Welcome to SWI-Prolog (threaded, 64 bits, version 8.0.3)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit http://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- working_directory(_,'/Users/mbar098/MikesStuff/Academic.d/Teaching.d/CompSci.367.d/2019.d/ASSIGNMENTS.D/Mikes.d/A4.d/Solution.d').
+true.
+
+?- [ld].
+Warning: /Users/mbar098/MikesStuff/Academic.d/Teaching.d/CompSci.367.d/2019.d/ASSIGNMENTS.D/Mikes.d/A4.d/Solution.d/problemSolver.pl:67:
+	Singleton variable in branch: ClosedNode
+true.
+
+?- solution(tsp, p00, hZero, SolutionCost, SolutionPath).
+** problem p00 has been loaded.
+Nodes expanded = 0
+SolutionCost = 0,
+SolutionPath = [].
+
+?- solution(tsp, p01, hZero, SolutionCost, SolutionPath).
+** problem p01 has been loaded.
+Nodes expanded = 1
+SolutionCost = 0,
+SolutionPath = [step(selfVisit, [a], 0)] ;
+false.
+
+?- solution(tsp, p02, hZero, SolutionCost, SolutionPath).
+** problem p02 has been loaded.
+Nodes expanded = 4
+SolutionCost = 3,
+SolutionPath = [step(move, [a, 2, b], 2), step(move, [b, 1, a], 1)] ;
+false.
+
+?- solution(tsp, example5, hZero, SolutionCost, SolutionPath).
+** problem example5 has been loaded.
+Nodes expanded = 32
+SolutionCost = 64,
+SolutionPath = [step(move, [a, 14, c], 14), step(move, [c, 15, b], 15), step(move, [b, 18, d], 18), step(move, [d, 17, a], 17)] ;
+Nodes expanded = 33
+SolutionCost = 64,
+SolutionPath = [step(move, [a, 17, d], 17), step(move, [d, 18, b], 18), step(move, [b, 15, c], 15), step(move, [c, 14, a], 14)] ;
+Nodes expanded = 33
+SolutionCost = 73,
+SolutionPath = [step(move, [a, 17, d], 17), step(move, [d, 29, c], 29), step(move, [c, 15, b], 15), step(move, [b, 12, a], 12)] ;
+false.
+
+?- 
